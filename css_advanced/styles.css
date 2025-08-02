@@ -1,0 +1,256 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  color: #fff;
+  line-height: 1.6;
+  background-color: #fff;
+}
+
+/* Utility classes */
+button {
+  background-color: #C271FF;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header & Hero */
+.hero-wrapper {
+  background: url('./images/hero-background.jpg') no-repeat center center/cover;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+}
+
+header nav img {
+  height: 40px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+header nav ul li a {
+  color: white;
+  font-weight: 500;
+}
+
+/* Hero Text */
+.hero-text {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.get-school {
+  font-size: 64px;
+  margin-bottom: 16px;
+}
+
+.hero-subtitle {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/* Pros Section */
+.hero .hero-text + div {
+  padding: 60px;
+  background: linear-gradient(#071629, #071629);
+  text-align: center;
+}
+
+.hero .hero-text + div h2 {
+  color: #C271FF;
+  margin-bottom: 40px;
+}
+
+.hero .hero-text + div > div {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+}
+
+.hero .hero-text + div img {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+
+/* Testimonial Section */
+main > section:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #C271FF;
+  color: white;
+  padding: 60px;
+}
+
+main > section:nth-of-type(2) img {
+  border-radius: 50%;
+  margin-right: 40px;
+}
+
+/* Popular Tutorials */
+main > section:nth-of-type(3) {
+  padding: 60px;
+  color: black;
+  text-align: center;
+}
+
+main > section:nth-of-type(3) h2 {
+  margin-bottom: 40px;
+}
+
+main > section:nth-of-type(3) > div {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+}
+
+main > section:nth-of-type(3) > div > div {
+  text-align: left;
+}
+
+main > section:nth-of-type(3) img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Free Membership Section */
+main > section:nth-of-type(4) {
+  background-color: #071629;
+  color: white;
+  padding: 60px;
+  text-align: center;
+}
+
+main > section:nth-of-type(4) h2 {
+  color: #C271FF;
+  margin-bottom: 40px;
+}
+
+main > section:nth-of-type(4) > div {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+
+main > section:nth-of-type(4) img {
+  width: 40px;
+  margin-bottom: 10px;
+}
+
+/* FAQ */
+main > section:nth-of-type(5) {
+  background-color: #fff;
+  color: #071629;
+  padding: 60px;
+}
+
+main > section:nth-of-type(5) h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+main > section:nth-of-type(5) > div {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+main > section:nth-of-type(5) h3 {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #071629;
+  padding: 40px 60px;
+  color: white;
+}
+
+footer section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer img {
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+footer i {
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+footer p {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+  main > section:nth-of-type(3) > div {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  main > section:nth-of-type(4) > div {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .hero-subtitle {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  main > section:nth-of-type(3) > div {
+    grid-template-columns: 1fr;
+  }
+
+  main > section:nth-of-type(5) > div {
+    flex-direction: column;
+  }
+}
